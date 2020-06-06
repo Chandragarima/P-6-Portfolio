@@ -1,0 +1,67 @@
+<html>
+<header>
+   <title>Music Player</title>
+   <link rel="stylesheet" type="text/css" href="ipod.css"/>
+   <link href="https://fonts.googleapis.com/icon?family=Material+Icons"  rel="stylesheet">  
+</header>
+
+<body>
+   <div id="screen">
+      <div class="head-bar">                   
+         <a href="songs.html">
+         <img id="back-button" src="images/pngguru.com.png" title="Back" /></a>
+         <h1>My Player</h1>
+      </div>
+
+   <img class="player-album-art" src="images/cbook.jpg" alt="Coloring Book Album Cover"/>
+
+   <div>
+      <p id="player-song-name">All We Got</p>
+      <p class="player-song-info"><em>Coloring Book</em> - Chance The Rapper</p>
+   </div> 
+
+   <input type="range" id="player-time" oninput="outputUpdate(value)">  
+   <div id="time-elapsed">0:00</div>
+   <div id="time-total">3:00</div>    
+
+   <div class="player-controls">
+      <button id="prev-song" onclick="prevSong()">
+      <img src="images/round_skip_previous_black_18dp.png" alt="Previous Song"/>    </button>
+
+      <button id="play-button" title="Play" onclick="switchPlay();">
+         <img src="images/round_play_arrow_black_18dp.png"  alt="Play Song"/>       </button>
+
+      <button id="pause-button" class="hidden" title="Pause" onclick="switchPlay();">
+         <img src="images/round_pause_black_18dp.png"  alt="Pause Song"/>           </button>
+
+      <button id="next-song" onclick="nextSong()">
+         <img src="images/round_skip_next_black_18dp.png" alt="Next Song"/>         </button>
+   </div>
+
+   <div>
+      <img class="volume-bar" src="images/white-speaker-icon-342976.png" alt="Volume Control"/>
+      <div class="volume-level">
+         <div id="vl0"></div>
+         <div id="vl1"></div>
+         <div id="vl2"></div>
+         <div id="vl3"></div>
+         <div id="vl4"></div>
+         <div id="vl5"></div>
+      </div>
+   </div>
+
+   <div  class="volume-rocker">
+      <button onclick="volDown()">
+      <img src="images/round_remove_black_18dp.png" alt="Reduce Volume"/>    </button>
+
+      <button onclick="volUp()">
+      <img src="images/round_add_black_18dp.png" alt="Increase Volume"/>        </button>
+   </div> 
+
+</div>
+<script src="ipod.js"></script>
+</body>
+</html>
+<!-- 
+* bg iphone img is 363x762px
+* iphone 'screen' is apprx 300x530 -->
